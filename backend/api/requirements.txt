@@ -2,5 +2,9 @@ pulumi>=3.0.0,<4.0.0
 pulumi-gcp
 pulumi_docker
 fastapi
-sqlalchemy
-uvicorn
+uvicorn[standard]
+pydantic[email]
+motor
+dnspython
+black
+flake8
