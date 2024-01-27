@@ -5,7 +5,8 @@ from fastapi.responses import JSONResponse
 from ..db.models import TaskModel, UpdateTaskModel
 
 router = APIRouter(
-    prefix="/tasks"
+    prefix="/tasks", 
+    tags=["tasks"]
 )
 
 @router.post("/", response_description="Add new task")
