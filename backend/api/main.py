@@ -1,6 +1,7 @@
 import uvicorn
-from fastapi import FastAPI
+from fastapi import FastAPI, Response
 from motor.motor_asyncio import AsyncIOMotorClient
+
 
 from config import settings
 
@@ -14,6 +15,12 @@ async def startup_db_client():
 @app.on_event("shutdown")
 async def shutdown_db_client():
     app.mongodb_client.close()
+
+
+@app.get("/")
+def read_root():
+    return Response("Server is running.")
+
 
 if __name__ == "__main__":
     uvicorn.run(
