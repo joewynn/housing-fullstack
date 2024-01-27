@@ -2,12 +2,24 @@
 name = "housing farm stack demo"
 version = "0.1.0"
 description = "using the FARM stack to build a full stack system"
-authors = ["Your Name <you@example.com>"]
+authors = ["Joseph M <josephwam@gmail.com>"]
 license = "MIT"
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
+pulumi = ">=3.0.0,<4.0.0"
+pulumi-gcp = "^7.7.0"
+pulumi-docker = "^4.5.1"
+fastapi = "^0.109.0"
+uvicorn = {extras = ["standard"], version = "^0.27.0"}
+pydantic = {extras = ["email"], version = "^2.5.3"}
+motor = "^3.3.2"
+dnspython = "^2.5.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.1.0"
+flake8 = "^7.0.0"
 
 
 [build-system]
